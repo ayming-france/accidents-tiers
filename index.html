@@ -293,7 +293,7 @@
           .atmp-link { flex: 1; padding: var(--space-24) 13px; position: relative; text-align: center; color: #fff; }
           .atmp-link:first-child { border-radius: var(--radius-xl) 0 0 var(--radius-xl); }
           .atmp-link:last-child { border-radius: 0 var(--radius-xl) var(--radius-xl) 0; }
-          .atmp-link-dim { background: linear-gradient(180deg, rgba(0,61,121,0.7) 0%, rgba(0,61,121,0.5) 100%); }
+          .atmp-link-dim { background: linear-gradient(180deg, rgba(var(--blue-dark-rgb), 0.7) 0%, rgba(var(--blue-dark-rgb), 0.5) 100%); }
           .atmp-link-active { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--gradient-green-end) 100%); z-index: 2; border-radius: var(--radius-lg); box-shadow: var(--shadow-navy-lg); }
           .atmp-number { font-size: 36px; font-weight: var(--weight-bold); opacity: 0.2; line-height: var(--leading-tight); margin-bottom: var(--space-6); }
           .atmp-link-active .atmp-number { opacity: 0.35; }
@@ -305,7 +305,7 @@
           .atmp-link-active .atmp-bullets li::before { color: rgba(255,255,255,0.9); }
           .atmp-offer { font-size: 10.5px; opacity: 0.5; margin-top: var(--space-12); font-style: italic; }
           .atmp-link-active .atmp-offer { opacity: 0.75; }
-          .atmp-arrow { display: flex; align-items: center; font-size: var(--font-18); color: rgba(0,61,121,0.35); margin: 0 -6px; z-index: 1; }
+          .atmp-arrow { display: flex; align-items: center; font-size: var(--font-18); color: rgba(var(--blue-dark-rgb), 0.35); margin: 0 -6px; z-index: 1; }
           .atmp-footer { text-align: center; margin-top: var(--space-26); }
           .atmp-footer p { font-size: var(--font-14); color: #777; }
           .atmp-footer strong { color: var(--blue-dark); }
@@ -576,7 +576,7 @@
     </section>
 
     <!-- SLIDE 10: OPTIONS -->
-    <section class="slide" data-chapter="options" data-slide="11" style="background: var(--bg-light);">
+    <section class="slide options-slide" data-chapter="options" data-slide="11">
       <div class="slide-inner">
         <h1 class="slide-title">Un maillon de la chaîne AT/MP</h1>
 
@@ -587,7 +587,7 @@
           .option-card .card-image img { transition: transform 0.4s ease; }
           .option-card .card-overlay {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, rgba(0,61,121,0.7) 0%, rgba(10,179,140,0.6) 100%);
+            background: linear-gradient(135deg, rgba(var(--blue-dark-rgb), 0.7) 0%, rgba(var(--gradient-green-end-rgb), 0.6) 100%);
             display: flex; align-items: center; justify-content: center;
             opacity: 0; transition: opacity 0.4s ease; border-radius: var(--radius-lg);
           }
@@ -602,9 +602,14 @@
           .option-badge { display: inline-block; padding: var(--space-4) var(--space-14); border-radius: var(--radius-2xl); font-size: var(--font-11); font-weight: var(--weight-bold); letter-spacing: 1px; text-transform: uppercase; margin-bottom: var(--space-8); background: linear-gradient(135deg, var(--blue-dark), var(--gradient-green-end)); color: #fff; }
           .options-footer { text-align: center; margin: var(--space-26) auto 0; max-width: 760px; font-size: 15.5px; color: #555; line-height: var(--leading-relaxed); }
           .options-footer a { color: var(--blue-dark); font-weight: var(--weight-bold); text-decoration: none; }
+          .options-slide { background: var(--bg-light); }
+          .options-row { display: flex; justify-content: center; gap: var(--space-22); width: 100%; max-width: 1180px; }
+          .option-card .column-card h3 { font-size: 17px; }
+          .option-card .column-card p { font-size: var(--font-13); }
+          .ancrage-title { text-align: left; margin-bottom: var(--space-28); }
         </style>
 
-        <div style="display: flex; justify-content: center; gap: 22px; width: 100%; max-width: 1180px;">
+        <div class="options-row">
           <a href="https://ayming-france.github.io/declarer-un-accident-du-travail/" target="_blank" class="option-card">
             <div class="column-card">
               <div class="card-image">
@@ -612,8 +617,8 @@
                 <div class="card-overlay"><span>Découvrir cette offre</span></div>
               </div>
               <span class="option-badge">En option</span>
-              <h3 style="font-size:17px;">Déclarer un accident du travail</h3>
-              <p style="font-size:13px;">La déclaration comme dossier probant, en amont : mieux qualifier l'accident dès la première minute.</p>
+              <h3>Déclarer un accident du travail</h3>
+              <p>La déclaration comme dossier probant, en amont : mieux qualifier l'accident dès la première minute.</p>
             </div>
           </a>
 
@@ -624,8 +629,8 @@
                 <div class="card-overlay"><span>Découvrir cette offre</span></div>
               </div>
               <span class="option-badge">En option</span>
-              <h3 style="font-size:17px;">Piloter les arrêts longue durée</h3>
-              <p style="font-size:13px;">Détecter et suivre les arrêts AT qui durent, dont ceux liés à un accident causé par un tiers.</p>
+              <h3>Piloter les arrêts longue durée</h3>
+              <p>Détecter et suivre les arrêts AT qui durent, dont ceux liés à un accident causé par un tiers.</p>
             </div>
           </a>
 
@@ -636,8 +641,8 @@
                 <div class="card-overlay"><span>Découvrir cette offre</span></div>
               </div>
               <span class="option-badge">En option</span>
-              <h3 style="font-size:17px;">Maîtriser les cotisations AT/MP</h3>
-              <p style="font-size:13px;">Piloter le taux que la récupération contre un tiers vient alléger sur votre compte employeur.</p>
+              <h3>Maîtriser les cotisations AT/MP</h3>
+              <p>Piloter le taux que la récupération contre un tiers vient alléger sur votre compte employeur.</p>
             </div>
           </a>
         </div>
@@ -753,7 +758,7 @@
       <div class="slide-inner">
         <div class="ancrage-layout">
           <div class="ancrage-text">
-            <h1 class="slide-title" style="text-align: left; margin-bottom: 28px;">Un fort ancrage <strong>en France</strong>...</h1>
+            <h1 class="slide-title ancrage-title">Un fort ancrage <strong>en France</strong>...</h1>
             <p>Nos équipes locales accompagnent au quotidien nos clients dans leur développement et leurs transformations <strong>en s'appuyant sur un écosystème de professionnels en régions</strong> :</p>
             <p>experts scientifiques, experts comptables, établissements bancaires, pôles de compétitivité, fédérations professionnelles, avec un maillage de cabinets d'avocats et de médecins indépendants.</p>
           </div>
@@ -837,7 +842,7 @@
         <h1 class="slide-title">Ce dont nous avons besoin</h1>
 
         <style>
-          .next-step { margin-top: var(--space-34); padding: var(--space-18) var(--space-26); border-radius: var(--radius-14); background: linear-gradient(90deg, rgba(15,167,226,0.10), rgba(10,179,140,0.10)); border: 1px solid rgba(17,169,230,0.35); font-size: var(--font-18); font-weight: var(--weight-bold); color: var(--blue-dark); text-align: center; }
+          .next-step { margin-top: var(--space-34); padding: var(--space-18) var(--space-26); border-radius: var(--radius-14); background: linear-gradient(90deg, rgba(var(--blue-primary-rgb), 0.10), rgba(var(--gradient-green-end-rgb), 0.10)); border: 1px solid rgba(var(--blue-primary-rgb), 0.35); font-size: var(--font-18); font-weight: var(--weight-bold); color: var(--blue-dark); text-align: center; }
         </style>
 
         <div class="requirements-box">
